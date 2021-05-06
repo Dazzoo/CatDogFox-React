@@ -1,0 +1,10 @@
+.index img{
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+.index{
+    display: flex;
+    float: right;
+    margin-right: 100px;
+}

@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect, useState} from 'react'
+import { Redirect } from "react-router-dom"
+import {Route} from "react-router-dom"
+import {connect} from 'react-redux'
+import styles from './App.module.css'
+import { compose } from 'redux'
+import { withRouter } from "react-router"
+import Index from './Components/Index/Index'
+import Cat from './Components/Cat/Cat'
+import Dog from './Components/Dog/Dog'
+import Fox from './Components/Fox/Fox'
+import NavBar from './Components/NavBar/NavBar'
+import {UpdateCatImg, UpdateDogImg, UpdateFoxImg} from './redux/commonReducer'
 
-function App() {
+const App = (props) => {
+    useEffect(() => {
+        props.UpdateCatImg(5000)
+        props.UpdateDogImg(10000)
+        props.UpdateFoxImg(15000)
+
+    }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.PageWrapper}>
+      <div className={styles.NavMenuWrap} >
+        <NavBar />
+      </div>
+      <div className={styles.MainPage}>
+          <Route path='/' render={() => <Redirect from="/" to="/index" />} />
+          <Route path='/index' render={() => <Index {...props} />} />
+          <Route path='/cat' render={() => <Cat {...props} />} />
+          <Route path='/dog' render={() => <Dog {...props} />} />
+          <Route path='/fox' render={() => <Fox {...props} />} />
+      </div>
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+    return {
+        cat: state.commonData.CatUrlImg,
+        dog: state.commonData.DogUrlImg,
+        fox: state.commonData.FoxUrlImg
+    }
+}
+
+
+let AppContainer = compose(
+    withRouter,
+    connect(mapStateToProps,{UpdateCatImg, UpdateDogImg, UpdateFoxImg}))(App)
+
+export default AppContainer;

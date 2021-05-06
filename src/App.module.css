@@ -1,0 +1,16 @@
+.PageWrapper{
+    max-width:1200px;
+    margin:0 auto;
+}
+.NavMenuWrap{
+    background-color: blueviolet;
+    width: 120px;
+    height: 0px;
+    display: block;
+}
+.MainPage{
+    display: block;
+}
+img{
+    padding-right: 10px;
+}
