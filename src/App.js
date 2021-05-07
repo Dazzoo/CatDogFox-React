@@ -5,6 +5,7 @@ import {connect} from 'react-redux'
 import styles from './App.module.css'
 import { compose } from 'redux'
 import { withRouter } from "react-router"
+import { PreloaderThreeDots } from './Components/common/Preloaders/PreloaderThreeDots'
 import Index from './Components/Index/Index'
 import Cat from './Components/Cat/Cat'
 import Dog from './Components/Dog/Dog'
@@ -18,7 +19,11 @@ const App = (props) => {
         props.UpdateDogImg(10000)
         props.UpdateFoxImg(15000)
 
-    }, []);
+    }, [])
+
+    if(!props.cat && !props.dog && !props.fox){
+     return <PreloaderThreeDots/>
+    }
 
   return (
     <div className={styles.PageWrapper}>

@@ -1,12 +1,19 @@
 .PageWrapper{
+    margin: 0 auto;
     max-width:1200px;
-    margin:0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+            "navMenu ";
+
 }
 .NavMenuWrap{
     background-color: blueviolet;
     width: 120px;
     height: 0px;
-    display: block;
+    grid-area: navMenu;
 }
 .MainPage{
     display: block;
