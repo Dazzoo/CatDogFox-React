@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/CatDogFox-React/static/css/main.6233ad0e.chunk.css",
+    "main.css": "/CatDogFox-React/static/css/main.cb6c70af.chunk.css",
     "main.js": "/CatDogFox-React/static/js/main.8ccd01b2.chunk.js",
     "main.js.map": "/CatDogFox-React/static/js/main.8ccd01b2.chunk.js.map",
     "runtime-main.js": "/CatDogFox-React/static/js/runtime-main.13f400ae.js",
@@ -10,13 +10,13 @@
     "static/js/3.d85a8d33.chunk.js": "/CatDogFox-React/static/js/3.d85a8d33.chunk.js",
     "static/js/3.d85a8d33.chunk.js.map": "/CatDogFox-React/static/js/3.d85a8d33.chunk.js.map",
     "index.html": "/CatDogFox-React/index.html",
-    "static/css/main.6233ad0e.chunk.css.map": "/CatDogFox-React/static/css/main.6233ad0e.chunk.css.map",
+    "static/css/main.cb6c70af.chunk.css.map": "/CatDogFox-React/static/css/main.cb6c70af.chunk.css.map",
     "static/js/2.39ae8c16.chunk.js.LICENSE.txt": "/CatDogFox-React/static/js/2.39ae8c16.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.13f400ae.js",
     "static/js/2.39ae8c16.chunk.js",
-    "static/css/main.6233ad0e.chunk.css",
+    "static/css/main.cb6c70af.chunk.css",
     "static/js/main.8ccd01b2.chunk.js"
   ]
 }
